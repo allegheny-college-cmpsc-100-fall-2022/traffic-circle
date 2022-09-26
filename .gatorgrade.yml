@@ -118,3 +118,14 @@
     options:
       regex: "(el)?if\\ssignal\\s=="
       count: 2
+# Reflection
+- office/reflection.md:
+  - description: reflection.md answers all questions
+    check: CountFileParagraphs
+    options:
+      count: 6
+- office/reflection.md:
+  - description: reflection.md contains at least 350 words
+    check: CountFileWords
+    options:
+      count: 350
