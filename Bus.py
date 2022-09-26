@@ -57,11 +57,14 @@ class Bus(FixtureSpec):
         Bus.__report(direction, stoplight)
 
         #------------------------
-        while stoplight != "🔴":
-            Bus.__move_bus(direction)
-            direction = Bus.__get_direction()
-            stoplight = Bus.__get_light(direction)
-            Bus.__report(direction, stoplight)
+        # TODO: Use a while loop to allow the bus to keep moving
+        #       until it encounters a red light. The logic part
+        #       of this asks:
+        # 
+        #       stoplight IS NOT 🔴
+        #
+        #       Note: Details on the remainder of the logic are in the 
+        #             README
         #------------------------
 
 def main():

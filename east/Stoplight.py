@@ -35,17 +35,22 @@ class Stoplight(FixtureSpec):
     # Do not alter
 
     #----------------------
-    if light == "🔴":
-      light = "🟢"
-      turn = True
-    elif light == "🟡":
-      light = "🔴"
-    if turn:
-      light == "🟢"
-    elif light == "🟢" and not turn:
-      pass
-    if light == "🟢" and not hold and not turn:
-      light = "🟡"
+    # TODO: Using variables light, hold, and turn, write the if statement
+    #       logic to implement this Stoplight via the requirements in the README
+    #
+    #       Note: this uses may use the "not" prefix on either turn or hold (or
+    #             both); this is like saying "the opposite of." For example:
+    #             
+    #       "not turn" would mean that the turn signal shouldn't be on
+    #
+    #       light: color of stoplight (string)
+    #       turn: if turn signal should be on (boolean)
+    #       hold: if the signal should hold its current state (boolean)
+    #
+    #       light colors as strings: 🔴 🟡 🟢
+    #
+    #       Note: you do not need to worry about the turn signal string, just
+    #             the turn variable
     #----------------------
     
     # Do not alter

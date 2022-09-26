@@ -33,12 +33,13 @@ class Stoplight(FixtureSpec):
     # Do not alter
 
     #----------------------
-    if light == "🟡":
-      light = "🔴"
-    if light == "🟢" and timeout:
-      light = "🟡"
-    if light == "🔴" and timeout:
-      light = "🟢"
+    # TODO: Using the light and timeout variables, implement if statement
+    #       logic to implement this Stoplight via the requirements in the README
+    #
+    #       light: color of stoplight (string)
+    #       timeout: True if the time has elapsed (boolean)
+    #
+    #       light colors as strings: 🔴 🟡 🟢
     #----------------------
     
     # Do not alter

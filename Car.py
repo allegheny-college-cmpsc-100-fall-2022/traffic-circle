@@ -29,10 +29,16 @@ class Car(FixtureSpec):
         # Do not alter
 
         #------------------------
-        if signal == "🟢\n➡️":
-            move_to = input("Direction to turn: ")
-        elif signal == "🟢":
-            move_to = direction
+        # TODO: Create conditional (if statement) logic to allow the 
+        #       car to continue if only encountering 🟢 lights
+        #
+        #       The logic for the turn signal should ask what direction
+        #       to turn if the car encounters "🟢\n➡️" (turn signal)
+        #    
+        #       Note: you must use the move_to variable to record either
+        #             the input above or the direction parameter
+        #     
+        #       Note: Don't forget to add the input in the main()!
         #------------------------
 
         # Do not alter
@@ -47,7 +53,16 @@ class Car(FixtureSpec):
         # Do not alter
 
 def main():
-    direction = input("Direction: ")
+    #------------------------
+    # TODO: Take input for where the car should go; keep in mind
+    #       that the available values are north, south, east, west.
+    #
+    #       How does that factor into your ability to use if statements?
+    #
+    #       Note: you must use the identifier "direction" to keep track of this
+    #             as it's used below to transmit the chosen direction to
+    #             the Car.
+    #------------------------
 
     cwd = check_flag("cwd")
 

@@ -19,12 +19,12 @@ class Stoplight(FixtureSpec):
     # Do not alter
 
     #----------------------
-    if light == "🔴":
-      light = "🟢"
-    elif light == "🟡":
-      light = "🔴"
-    elif light == "🟢":
-      light = "🟡"
+    # TODO: Using the light variable, implement if statement (conditional)
+    #       logic to implement this Stoplight via the requirements in the README
+    #
+    #       light: color of stoplight (string)
+    #
+    #       light colors as strings: 🔴 🟡 🟢
     #----------------------
     
     # Do not alter
