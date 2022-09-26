@@ -1,0 +1,120 @@
+# TODOs
+- office/reflection.md:
+  - description: No TODO markers left in reflection.md
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- north/Stoplight.py:
+  - description: No TODO markers left in north/Stoplight.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- south/Stoplight.py:
+  - description: No TODO markers left in south/Stoplight.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- east/Stoplight.py:
+  - description: No TODO markers left in east/Stoplight.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- west/Stoplight.py:
+  - description: No TODO markers left in west/Stoplight.py
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- .bus:
+  - description: No TODO markers left in Bus.py (wherever it ended up)
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+- .car:
+  - description: No TODO markers left in Car.py (wherever it ended up)
+    check: MatchFileFragment
+    options:
+      fragment: "TODO"
+      count: 0
+      exact: true
+# Events
+- description: Bus has traveled (is no longer in main folder)
+  check: MatchCommandFragment
+  options:
+    command: find Bus.py
+    fragment: "Bus.py"
+    count: 0
+    exact: true
+- description: Car has traveled (is no longer in main folder)
+  check: MatchCommandFragment
+  options:
+    command: find Car.py
+    fragment: "Car.py"
+    count: 0
+    exact: true
+# Code cops
+- north/Stoplight.py:
+  - description: north/Stoplight.py contains at least two if statements for the light variable
+    check: MatchFileRegex
+    options:
+      regex: "(el)?if\\slight\\s=="
+      count: 2
+- south/Stoplight.py:
+  - description: south/Stoplight.py contains at least two if statements for the light variable
+    check: MatchFileRegex
+    options:
+      regex: "(el)?if\\slight\\s=="
+      count: 2
+- east/Stoplight.py:
+  - description: east/Stoplight.py contains at least two if statements for the light variable
+    check: MatchFileRegex
+    options:
+      regex: "(el)?if\\slight\\s=="
+      count: 2
+- east/Stoplight.py:
+  - description: east/Stoplight.py accounts for the turn signal
+    check: MatchFileRegex
+    options:
+      regex: "and\\s(not)?\\sturn"
+      count: 3
+- east/Stoplight.py:
+  - description: east/Stoplight.py accounts for the hold between signals
+    check: MatchFileRegex
+    options:
+      regex: "and\\s(not\\s)?hold"
+      count: 1
+- west/Stoplight.py:
+  - description: west/Stoplight.py accounts for the timeout between signals
+    check: MatchFileRegex
+    options:
+      regex: "and\\s(not\\s)?timeout"
+      count: 1
+- west/Stoplight.py:
+  - description: west/Stoplight.py contains at least two if statements for the light variable
+    check: MatchFileRegex
+    options:
+      regex: "(el)?if\\slight\\s=="
+      count: 2
+- .bus:
+  - description: Bus.py (wherever it is) uses a while statement
+    check: MatchFileRegex
+    options:
+      regex: "while\\sstoplight"
+      count: 1
+- .car:
+  - description: Car.py (where'd it go?) uses at least two if statements for the signal variable
+    check: MatchFileRegex
+    options:
+      regex: "(el)?if\\ssignal\\s=="
+      count: 2
