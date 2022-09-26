@@ -1,4 +1,9 @@
 
+| Date              |          |
+|:------------------|:---------|
+| 26 September 2022 | Assigned |
+| 2 October 2022    | Due      |
+| Status            | [![GatorGrader](../../actions/workflows/main.yml/badge.svg)](../../actions/workflows/main.yml) |
 
 # TURNABOUTS TO TAME TRAFFIC? `term-world` CITIZENS' TAKES ARE TEPID
 
