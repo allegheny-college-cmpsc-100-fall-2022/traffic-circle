@@ -11,27 +11,27 @@ class Stoplight(FixtureSpec):
     light_flag = check_flag("east_light")
     light_time = check_flag("east_turn")
     self.state = light_flag if light_flag else "🔴"
-    self.timing = light_time if light_time else "00:00:00"
+    self.timing = light_time if light_time else 0
 
   def __str__(self) -> str:
     self.state += "\n➡️" if self.turn_signal else ""
     return self.state
 
   def __time_now(self) -> str:
-    now = datetime.now()
-    return now.strftime("%H:%M:%S")
+    now = datetime.now().timestamp()
+    return now
 
   def __timing(self) -> bool:
-    now = datetime.strptime(self.__time_now(), "%H:%M:%S")
-    then = datetime.strptime(self.timing, "%H:%M:%S")
+    now = float(self.__time_now())
+    then = float(self.timing)
     difference = now - then
-    return (now - then).total_seconds() > 5
+    return difference >
 
   def use(self) -> None:
     # Do not alter
     light = self.state
     turn = not self.__timing()
-    hold = not self.timing == "00:00:00"
+    hold = not self.timing == 0
     # Do not alter
 
     #----------------------
@@ -60,7 +60,7 @@ class Stoplight(FixtureSpec):
     if turn and self.__timing():
       set_flag("east_turn", self.__time_now())
     elif light == "🟢" and not turn: 
-      set_flag("east_turn", "00:00:00")
+      set_flag("east_turn", 0)
     # Do not alter
 
 def main():

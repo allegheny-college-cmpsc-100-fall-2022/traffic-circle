@@ -1,9 +1,9 @@
 {
   "south_light": "",
   "east_light": "\ud83d\udd34",
-  "east_turn": "00:00:00",
+  "east_turn": "0",
   "north_light": "\ud83d\udfe2",
   "west_light": "\ud83d\udfe2",
-  "west_time": "23:55:57",
-  "cwd": "/world/city/Ix/dluman/traffic-circle"
+  "west_time": 1667939443.985012,
+  "cwd": "/home/world/Muufo/yattia25/traffic-circle-Yara"
 }

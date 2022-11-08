@@ -11,20 +11,20 @@ class Stoplight(FixtureSpec):
     light_flag = check_flag("west_light")
     light_time = check_flag("west_time")
     self.state = light_flag if light_flag else "🔴"
-    self.timing = light_time if light_time else "00:00:00"
+    self.timing = light_time if light_time else 0
 
   def __str__(self) -> str:
     return f"{self.state}"
 
   def __time_now(self) -> str:
-    now = datetime.now()
-    return now.strftime("%H:%M:%S")
+    now = datetime.now().timestamp()
+    return now
 
   def __timing(self) -> bool:
-    now = datetime.strptime(self.__time_now(), "%H:%M:%S")
-    then = datetime.strptime(self.timing, "%H:%M:%S")
+    now = float(self.__time_now())
+    then = float(self.timing)
     difference = now - then
-    return (now - then).total_seconds() > 5
+    return difference > 5
 
   def use(self) -> None:
     # Do not alter
